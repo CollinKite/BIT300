@@ -1,0 +1,13 @@
+---
+- name: create file
+  hosts: ubuntu
+  remote_user: bynx
+
+  tasks:
+   - name: create txt file
+     shell: echo "This is a small txt file." > ~/small.txt
+   - name: append to txt file
+     shell: echo "Another line in the sand." >> ~/small.txt
+   - name: date to txt file
+     raw: date >> ~/small.txt
+...

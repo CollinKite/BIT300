@@ -1,0 +1,12 @@
+---
+- name: Update vim
+  hosts: ubuntu
+  remote_user: bynx
+  become: yes
+
+  tasks:
+  - name: Ensure vim is installed and at the latest version
+    apt:
+      name: vim
+      state: latest
+...
